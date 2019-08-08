@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jqg-B3-Khu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="a4i-tD-mtW">
+            <objects>
+                <viewController id="jqg-B3-Khu" customClass="MapViewController" customModule="TemplateEngineExampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0o0-VD-6I0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KKZ-A7-Ekq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KKZ-A7-Ekq" secondAttribute="height" multiplier="1:1" priority="999" id="uSb-iM-LZS"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="jqg-B3-Khu" id="Ukm-qT-B15"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="clL-Ge-Bto" firstAttribute="bottom" secondItem="KKZ-A7-Ekq" secondAttribute="bottom" id="8zX-K8-lZb"/>
+                            <constraint firstItem="KKZ-A7-Ekq" firstAttribute="top" secondItem="clL-Ge-Bto" secondAttribute="top" id="DEP-T2-SFF"/>
+                            <constraint firstItem="clL-Ge-Bto" firstAttribute="trailing" secondItem="KKZ-A7-Ekq" secondAttribute="trailing" id="J2e-qL-khY"/>
+                            <constraint firstItem="KKZ-A7-Ekq" firstAttribute="leading" secondItem="clL-Ge-Bto" secondAttribute="leading" id="te1-BP-rZb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="clL-Ge-Bto"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="375"/>
+                    <connections>
+                        <outlet property="mapView" destination="KKZ-A7-Ekq" id="dAn-aL-Opr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x2F-ll-rLN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

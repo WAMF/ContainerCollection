@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dzg-ZQ-fvy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scene View Controller-->
+        <scene sceneID="qSl-eg-CtL">
+            <objects>
+                <viewController id="dzg-ZQ-fvy" customClass="SceneViewController" customModule="TemplateEngineExampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XNy-hT-gCu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preferredRenderingAPI="2" translatesAutoresizingMaskIntoConstraints="NO" id="LZB-EM-uSf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LZB-EM-uSf" secondAttribute="height" multiplier="1:1" id="xKf-jA-Ay5"/>
+                                </constraints>
+                            </sceneKitView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WgN-F8-NQr" firstAttribute="bottom" secondItem="LZB-EM-uSf" secondAttribute="bottom" priority="999" id="6CY-pS-il0"/>
+                            <constraint firstItem="LZB-EM-uSf" firstAttribute="top" secondItem="XNy-hT-gCu" secondAttribute="top" id="9nJ-SZ-XHz"/>
+                            <constraint firstAttribute="trailing" secondItem="LZB-EM-uSf" secondAttribute="trailing" id="puJ-WS-nuX"/>
+                            <constraint firstItem="LZB-EM-uSf" firstAttribute="leading" secondItem="XNy-hT-gCu" secondAttribute="leading" id="w54-GY-ucI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WgN-F8-NQr"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <size key="freeformSize" width="375" height="375"/>
+                    <connections>
+                        <outlet property="sceneView" destination="LZB-EM-uSf" id="8gs-1n-h5R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e9E-TL-hdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-335" y="183"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,44 @@
+{
+    "center": {
+        "latitude": 41.390205,
+        "longitude": 2.154007
+    },
+    "annotations": [
+        {
+            "title": "Sagrada Família",
+            "coordinate": {
+                "latitude": 41.4036299,
+                "longitude": 2.1743558
+            }
+        },
+        {
+            "title": "Camp Nou",
+            "coordinate": {
+                "latitude": 41.380898,
+                "longitude": 2.122820
+            }
+        },
+        {
+            "title": "La Pedrera",
+            "subtitle": "Officially called \"Casa Milà\"",
+            "coordinate": {
+                "latitude": 41.390498438,
+                "longitude": 2.156999372
+            }
+        },
+        {
+            "title": "Parc de la Ciutadella",
+            "coordinate": {
+                "latitude": 41.3856456,
+                "longitude": 2.1767082
+            }
+        },
+        {
+            "title": "Castell de Montjuïc",
+            "coordinate": {
+                "latitude": 41.3664204,
+                "longitude": 2.1619024
+            }
+        }
+    ]
+}

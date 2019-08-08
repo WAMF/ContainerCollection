@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hSt-I2-YMP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image View Controller-->
+        <scene sceneID="Yk1-6r-K4S">
+            <objects>
+                <viewController storyboardIdentifier="bottomDetail" id="hSt-I2-YMP" customClass="ImageViewController" customModule="TemplateEngineExampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R0a-K4-icm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="373"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YM6-Mi-DcA" userLabel="ImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" constant="300" id="DPK-Oe-jlz"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGb-ay-cf6" userLabel="TitleLabel">
+                                <rect key="frame" x="10" y="310" width="355" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uq8-Da-vKj" userLabel="SubitleLabel">
+                                <rect key="frame" x="10" y="342" width="355" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YM6-Mi-DcA" secondAttribute="trailing" id="DLg-IT-US5"/>
+                            <constraint firstItem="Uq8-Da-vKj" firstAttribute="top" secondItem="yGb-ay-cf6" secondAttribute="bottom" id="DqU-MO-pVf"/>
+                            <constraint firstItem="yGb-ay-cf6" firstAttribute="leading" secondItem="R0a-K4-icm" secondAttribute="leading" constant="10" id="JR6-tR-caO"/>
+                            <constraint firstAttribute="trailing" secondItem="Uq8-Da-vKj" secondAttribute="trailing" constant="10" id="NeA-R2-BCc"/>
+                            <constraint firstItem="yGb-ay-cf6" firstAttribute="top" secondItem="YM6-Mi-DcA" secondAttribute="bottom" constant="10" id="Zeq-f8-KBZ"/>
+                            <constraint firstItem="YM6-Mi-DcA" firstAttribute="top" secondItem="R0a-K4-icm" secondAttribute="top" id="k2Y-nq-pgD"/>
+                            <constraint firstItem="YM6-Mi-DcA" firstAttribute="leading" secondItem="R0a-K4-icm" secondAttribute="leading" id="rbo-mH-b92"/>
+                            <constraint firstAttribute="trailing" secondItem="yGb-ay-cf6" secondAttribute="trailing" constant="10" id="sVh-ik-gGt"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Uq8-Da-vKj" secondAttribute="bottom" constant="10" id="udT-U2-joq"/>
+                            <constraint firstItem="Uq8-Da-vKj" firstAttribute="leading" secondItem="R0a-K4-icm" secondAttribute="leading" constant="10" id="y3i-ll-Zba"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ixX-RP-i3h"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <size key="freeformSize" width="375" height="373"/>
+                    <connections>
+                        <outlet property="imageView" destination="YM6-Mi-DcA" id="qqp-7D-FWe"/>
+                        <outlet property="subtitleLabel" destination="Uq8-Da-vKj" id="DNl-A9-L9c"/>
+                        <outlet property="titleLabel" destination="yGb-ay-cf6" id="n4M-pE-QAN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aaL-vY-1jH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-953" y="-77"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="RWp-7O-np1">
+            <objects>
+                <viewController storyboardIdentifier="sideDetail" id="ixx-0y-qT2" customClass="ImageViewController" customModule="TemplateEngineExampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rqB-AE-yop">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="153.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KrA-vd-XaA" userLabel="ImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="153.5"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KrA-vd-XaA" secondAttribute="height" multiplier="11:9" id="nnx-Lm-LPy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKs-qC-93x" userLabel="TitleLabel">
+                                <rect key="frame" x="197.5" y="10" width="167.5" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6d-Ho-cUK" userLabel="SubitleLabel">
+                                <rect key="frame" x="197.5" y="41.5" width="167.5" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="I6d-Ho-cUK" firstAttribute="leading" secondItem="KrA-vd-XaA" secondAttribute="trailing" constant="10" id="7jc-Wd-WKg"/>
+                            <constraint firstItem="KrA-vd-XaA" firstAttribute="width" secondItem="rqB-AE-yop" secondAttribute="width" multiplier="0.5" id="8Fc-Ut-6Rr"/>
+                            <constraint firstItem="CKs-qC-93x" firstAttribute="width" secondItem="I6d-Ho-cUK" secondAttribute="width" id="9Bc-yL-dML"/>
+                            <constraint firstItem="KrA-vd-XaA" firstAttribute="leading" secondItem="3ar-9A-qPv" secondAttribute="leading" id="APS-Pz-7K1"/>
+                            <constraint firstItem="I6d-Ho-cUK" firstAttribute="top" secondItem="CKs-qC-93x" secondAttribute="bottom" id="DaX-cT-bRw"/>
+                            <constraint firstItem="CKs-qC-93x" firstAttribute="top" secondItem="3ar-9A-qPv" secondAttribute="top" constant="10" id="PTs-QG-SJe"/>
+                            <constraint firstItem="KrA-vd-XaA" firstAttribute="top" secondItem="3ar-9A-qPv" secondAttribute="top" id="Qqa-fw-jEu"/>
+                            <constraint firstItem="3ar-9A-qPv" firstAttribute="trailing" secondItem="I6d-Ho-cUK" secondAttribute="trailing" constant="10" id="WMJ-qG-FLh"/>
+                            <constraint firstItem="3ar-9A-qPv" firstAttribute="trailing" secondItem="CKs-qC-93x" secondAttribute="trailing" constant="10" id="gtt-YJ-zUe"/>
+                            <constraint firstItem="CKs-qC-93x" firstAttribute="leading" secondItem="KrA-vd-XaA" secondAttribute="trailing" constant="10" id="i7z-or-KxX"/>
+                            <constraint firstItem="3ar-9A-qPv" firstAttribute="bottom" secondItem="KrA-vd-XaA" secondAttribute="bottom" priority="999" id="ony-ib-GPm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3ar-9A-qPv"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <size key="freeformSize" width="375" height="153.5"/>
+                    <connections>
+                        <outlet property="imageView" destination="KrA-vd-XaA" id="7OE-XM-rGW"/>
+                        <outlet property="subtitleLabel" destination="I6d-Ho-cUK" id="5tS-yz-KjG"/>
+                        <outlet property="titleLabel" destination="CKs-qC-93x" id="r7i-lM-Qkr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KzF-GF-AIV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191" y="-176"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,43 @@
+{
+    "center": {
+        "latitude": 48.8589507,
+        "longitude": 2.2770205
+    },
+    "annotations": [
+        {
+            "title": "Tour Eiffel",
+            "coordinate": {
+                "latitude": 48.8559324,
+                "longitude": 2.2940166
+            }
+        },
+        {
+            "title": "Champs-Élysées",
+            "coordinate": {
+                "latitude": 48.8683151,
+                "longitude": 2.304399
+            }
+        },
+        {
+            "title": "Notre Dame",
+            "coordinate": {
+                "latitude": 48.85234,
+                "longitude": 2.3482876
+            }
+        },
+        {
+            "title": "Château de Versailles",
+            "coordinate": {
+                "latitude": 48.8044611,
+                "longitude": 2.1194718,
+            }
+        },
+        {
+            "title": "Musée du Louvre",
+            "coordinate": {
+                "latitude": 48.8593152,
+                "longitude": 2.3333116
+            }
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AbP-SP-Mi3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video Player View Controller-->
+        <scene sceneID="u8A-Fa-m0S">
+            <objects>
+                <viewController id="AbP-SP-Mi3" customClass="VideoPlayerViewController" customModule="TemplateEngineExampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dqS-Oq-shc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEh-ZZ-mdK">
+                                <rect key="frame" x="10" y="220" width="355" height="31.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31.5" id="Asb-5t-ofI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQN-Hf-lQr">
+                                <rect key="frame" x="10" y="251.5" width="355" height="28.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28.5" id="5LI-Q1-d2I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Yr-EF-MPb">
+                                <rect key="frame" x="0.0" y="10" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" constant="200" id="MeM-IW-3bz"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="cNl-px-UFr" kind="embed" id="i6Y-FC-g30"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7Yr-EF-MPb" firstAttribute="top" secondItem="Qnx-mj-lbS" secondAttribute="top" constant="10" id="0Zy-Y4-eMG"/>
+                            <constraint firstItem="7Yr-EF-MPb" firstAttribute="leading" secondItem="Qnx-mj-lbS" secondAttribute="leading" id="2PL-kf-SAb"/>
+                            <constraint firstItem="FQN-Hf-lQr" firstAttribute="bottom" secondItem="dqS-Oq-shc" secondAttribute="bottom" priority="999" constant="-10" id="CSJ-Jo-5xF"/>
+                            <constraint firstItem="yEh-ZZ-mdK" firstAttribute="leading" secondItem="dqS-Oq-shc" secondAttribute="leading" constant="10" id="Ksk-qV-mtF"/>
+                            <constraint firstItem="yEh-ZZ-mdK" firstAttribute="top" secondItem="7Yr-EF-MPb" secondAttribute="bottom" constant="10" id="NRb-6P-YH8"/>
+                            <constraint firstItem="FQN-Hf-lQr" firstAttribute="top" secondItem="yEh-ZZ-mdK" secondAttribute="bottom" id="Pqu-4d-g6O"/>
+                            <constraint firstItem="7Yr-EF-MPb" firstAttribute="trailing" secondItem="Qnx-mj-lbS" secondAttribute="trailing" id="uEK-R6-rhM"/>
+                            <constraint firstItem="FQN-Hf-lQr" firstAttribute="leading" secondItem="dqS-Oq-shc" secondAttribute="leading" constant="10" id="xb9-9O-4LI"/>
+                            <constraint firstAttribute="trailing" secondItem="yEh-ZZ-mdK" secondAttribute="trailing" constant="10" id="yea-G1-lLj"/>
+                            <constraint firstAttribute="trailing" secondItem="FQN-Hf-lQr" secondAttribute="trailing" constant="10" id="ysI-gw-rbj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qnx-mj-lbS"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="290"/>
+                    <connections>
+                        <outlet property="subtitleLabel" destination="FQN-Hf-lQr" id="grX-Yl-XBU"/>
+                        <outlet property="titleLabel" destination="yEh-ZZ-mdK" id="oos-uu-LpW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HId-u0-iUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="365.60000000000002" y="-253.67316341829087"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="Im2-RC-Vdo">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="cNl-px-UFr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BaK-pQ-pFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="-253"/>
+        </scene>
+    </scenes>
+</document>

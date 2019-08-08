@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0i6-ag-2Nu">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fallback View Controller-->
+        <scene sceneID="BpE-Jd-Xdz">
+            <objects>
+                <viewController storyboardIdentifier="PageElementViewController" id="0i6-ag-2Nu" customClass="FallbackViewController" customModule="ContainerCollection" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nPC-km-bxs"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bwg-4l-qVd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yOB-S4-vXI">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="220"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Component description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aov-Tr-1cy">
+                                <rect key="frame" x="90" y="68" width="1740" height="84"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60784313729999995" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Aov-Tr-1cy" firstAttribute="leading" secondItem="bJk-98-qRW" secondAttribute="leading" id="BNh-Ms-K1P"/>
+                            <constraint firstItem="bJk-98-qRW" firstAttribute="trailing" secondItem="Aov-Tr-1cy" secondAttribute="trailing" id="JUp-7k-fBd"/>
+                            <constraint firstItem="Bwg-4l-qVd" firstAttribute="top" secondItem="Aov-Tr-1cy" secondAttribute="bottom" constant="8" symbolic="YES" id="XrK-6V-b2q"/>
+                            <constraint firstItem="Aov-Tr-1cy" firstAttribute="top" secondItem="nPC-km-bxs" secondAttribute="bottom" constant="8" symbolic="YES" id="e8o-tb-JZq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bJk-98-qRW"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1920" height="220"/>
+                    <connections>
+                        <outlet property="label" destination="Aov-Tr-1cy" id="qRM-94-pFA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bOl-nl-VTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="133"/>
+        </scene>
+    </scenes>
+</document>

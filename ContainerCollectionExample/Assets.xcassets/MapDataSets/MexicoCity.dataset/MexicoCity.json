@@ -1,0 +1,29 @@
+{
+    "center": {
+        "latitude": 19.3910038,
+        "longitude": -99.2836968
+    },
+    "annotations": [
+        {
+            "title": "Castillo de Chapultepec",
+            "coordinate": {
+                "latitude": 19.4204447,
+                "longitude": -99.1841237
+            }
+        },
+        {
+            "title": "Catedral Metropolitana de la Ciudad de México",
+            "coordinate": {
+                "latitude": 19.435538,
+                "longitude": -99.1756649
+            }
+        },
+        {
+            "title": "Palacio de Bellas Artes",
+            "coordinate": {
+                "latitude": 19.435205,
+                "longitude": -99.1433887
+            }
+        }
+    ]
+}

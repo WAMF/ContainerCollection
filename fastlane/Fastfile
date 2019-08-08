@@ -1,0 +1,41 @@
+
+default_platform(:ios)
+
+####################################################################################################
+####################################################################################################
+
+##############
+# Test lanes #
+##############
+
+platform :ios do
+	desc "Builds and runs iOS UITests on the example app."
+	lane :run_uiTests do
+		scan(
+		    scheme: "ContainerCollectionExample",
+		    device: "iPhone 6s",
+		    xcargs: "-UseNewBuildSystem=YES",
+		    clean: true,
+		    disable_concurrent_testing: true
+  		)
+	end
+end
+
+####################################################################################################
+####################################################################################################
+
+#################
+# Release lanes #
+#################
+
+desc "Updates the podspec file to match the version of the Xcode project (iOS framework), and pushes to GitHub repository."
+desc "Tags the current release in the GitHub repository."
+desc "Deploys the podspec file to Trunk"
+lane :deploy_pod do
+	version_number = get_version_number(target: "ContainerCollection-iOS", configuration: "Release").to_s
+	version_bump_podspec(path: "ContainerCollection.podspec", version_number: version_number)
+	git_commit(path: "ContainerCollection.podspec", message: "Bump version to #{version_number}")
+	add_git_tag(tag: version_number)
+	push_to_git_remote(remote_branch: "master", tags: true)
+	pod_push(path: "ContainerCollection.podspec")
+end

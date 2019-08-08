@@ -1,0 +1,43 @@
+{
+    "center": {
+        "latitude": 51.5287718,
+        "longitude": -0.2416802
+    },
+    "annotations": [
+        {
+            "title": "Big Ben",
+            "coordinate": {
+                "latitude": 51.5007325,
+                "longitude": -0.1268141
+            }
+        },
+        {
+            "title": "Picadilly Circus",
+            "coordinate": {
+                "latitude": 51.5099728,
+                "longitude": -0.1371599
+            }
+        },
+        {
+            "title": "Palace of Westminster",
+            "coordinate": {
+                "latitude": 51.4994794,
+                "longitude": -0.1269979
+            }
+        },
+        {
+            "title": "Buckingham Palace",
+            "coordinate": {
+                "latitude": 51.5013673,
+                "longitude": -0.1440787
+            }
+        },
+        {
+            "title": "Sherlock's Home",
+            "coordinate": {
+                "latitude": 51.523785,
+                "longitude": -0.1606257
+            }
+        }
+    ]
+}
