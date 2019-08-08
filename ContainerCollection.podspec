@@ -6,10 +6,11 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => 'MIT', :file => 'LICENSE' }
   spec.homepage     = 'http://www.wearemobilefirst.com'
   spec.authors      = { 'Pere Daniel Prieto' => 'pere@wearemobilefirst.com', 'Christian Aranda' => 'christian@wearemobilefirst.com', 'Francesco Deliro' => 'francesco@wearemobilefirst.com', 'Daniel Daverio' => 'daniel@wearemobilefirst.com', 'Lee Higgins' => 'lee@wearemobilefirst.com' }
-  spec.source       = { :git => 'git@github.com:WAMF/ContainerCollection.git', :tag => spec.version }
+  spec.source       = { :git => 'https://github.com/WAMF/ContainerCollection.git', :tag => spec.version }
 
   spec.ios.deployment_target  = '10.0'
   spec.tvos.deployment_target  = '10.0'
+  spec.swift_version = "4.2"
 
   spec.ios.source_files = ['ContainerCollection/Common/**/*.{h,m,swift,storyboard}', 'ContainerCollection/iOS/**/*.{h,m,swift,storyboard}']
   spec.tvos.source_files = ['ContainerCollection/Common/**/*.{h,m,swift,storyboard}', 'ContainerCollection/tvOS/**/*.{h,m,swift,storyboard}']
