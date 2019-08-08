@@ -37,5 +37,5 @@ lane :deploy_pod do
 	git_commit(path: "ContainerCollection.podspec", message: "Bump version to #{version_number}")
 	add_git_tag(tag: version_number)
 	push_to_git_remote(remote_branch: "master", tags: true)
-	pod_push(path: "ContainerCollection.podspec")
+	pod_push(path: "ContainerCollection.podspec", allow_warnings: true)
 end
