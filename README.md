@@ -114,3 +114,7 @@ When selecting the stack of view controllers, you will be prompted for the numbe
 ## Known issues and incompatibilities
 
 Framework is compatible with iOS/tvOS 10 or above, but using it in iOS/tvOS 11 or higher for a better performance is strongly recommended.
+
+## Contribute
+
+In order to contribute to the ContainerCollection framework, first read our [Contribution guidelines](contribution_guidelines.md)
