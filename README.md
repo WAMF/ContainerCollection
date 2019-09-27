@@ -117,4 +117,4 @@ Framework is compatible with iOS/tvOS 10 or above, but using it in iOS/tvOS 11 o
 
 ## Contribute
 
-In order to contribute to the ContainerCollection framework, first read our [Contribution guidelines](contribution_guidelines.md)
+In order to contribute to the ContainerCollection framework, first read our [Contribution guidelines](contribution_guidelines.md).
