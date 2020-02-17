@@ -15,24 +15,38 @@ Install _fastlane_ using
 or alternatively using `brew cask install fastlane`
 
 # Available Actions
+### build_framework
+```
+fastlane build_framework
+```
+Builds the framework for the specified platform (either 'iOS' or 'tvOS').
+
+This lane is to make sure that all platforms build correctly and there are no breaking changes. No tests are executed.
+
+Usage example: fastlane build_framework platform:'iOS'
+### build_example_app
+```
+fastlane build_example_app
+```
+Builds the example app for the specified iOS version.
+
+This lane is to make sure that the example app builds correctly and that breaking API changes are detected before deployment.
+
+Usage example: fastlane build_example_app ios_version:'12.4'
+### run_uiTests
+```
+fastlane run_uiTests
+```
+Builds and runs iOS UITests on the example app in the specified device.
+
+Usage example: fastlane run_uiTests device:'iPhone 8'
 ### deploy_pod
 ```
 fastlane deploy_pod
 ```
-Updates the podspec file to match the version of the Xcode project (iOS framework), and pushes to GitHub repository.
-
-Tags the current release in the GitHub repository.
-
 Deploys the podspec file to Trunk
 
-----
-
-## iOS
-### ios run_uiTests
-```
-fastlane ios run_uiTests
-```
-Builds and runs iOS UITests on the example app.
+Usage example: fastlane deploy_pod
 
 ----
 
