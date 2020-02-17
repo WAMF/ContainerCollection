@@ -4,38 +4,64 @@ default_platform(:ios)
 ####################################################################################################
 ####################################################################################################
 
+###############
+# Build lanes #
+###############
+
+desc "Builds the framework for the specified platform (either 'iOS' or 'tvOS')."
+desc "This lane is to make sure that all platforms build correctly and there are no breaking changes. No tests are executed."
+desc "Usage example: fastlane build_framework platform:'iOS'"
+lane :build_framework do |options|
+	raise "Missing 'platform' parameter. Usage: fastlane build_framework platform:PLATFORM" unless options[:platform]
+	platform = options[:platform]
+	xcbuild(
+		scheme: "ContainerCollection-" + "#{platform}",
+		clean: true
+	)
+end
+
+desc "Builds the example app for the specified iOS version."
+desc "This lane is to make sure that the example app builds correctly and that breaking API changes are detected before deployment."
+desc "Usage example: fastlane build_example_app ios_version:'12.4'"
+lane :build_example_app do |options|
+	raise "Missing 'ios_version' parameter. Usage: fastlane build_example_app ios_version:IOS_VERSION" unless options[:ios_version]
+	ios_version = options[:ios_version]
+	xcbuild(
+		scheme: "ContainerCollectionExample",
+		sdk: "iphonesimulator" + "#{ios_version}",
+		clean: true
+	)
+end
+
 ##############
 # Test lanes #
 ##############
 
-platform :ios do
-	desc "Builds and runs iOS UITests on the example app."
-	lane :run_uiTests do
-		scan(
-		    scheme: "ContainerCollectionExample",
-		    device: "iPhone 6s",
-		    xcargs: "-UseNewBuildSystem=YES",
-		    clean: true,
-		    disable_concurrent_testing: true
-  		)
-	end
+desc "Builds and runs iOS UITests on the example app in the specified device."
+desc "Usage example: fastlane run_uiTests device:'iPhone 8'"
+lane :run_uiTests do |options|
+	raise "Missing 'device' parameter. Usage: fastlane ios test device:DEVICE" unless options[:device]
+	scan(
+	    scheme: "ContainerCollectionExample",
+	    device: options[:device],
+	    clean: true,
+	    disable_concurrent_testing: true
+  	)
 end
 
 ####################################################################################################
 ####################################################################################################
 
-#################
-# Release lanes #
-#################
+###################
+# Deployment lane #
+###################
 
-desc "Updates the podspec file to match the version of the Xcode project (iOS framework), and pushes to GitHub repository."
-desc "Tags the current release in the GitHub repository."
 desc "Deploys the podspec file to Trunk"
+desc "Usage example: fastlane deploy_pod"
 lane :deploy_pod do
-	version_number = get_version_number(target: "ContainerCollection-iOS", configuration: "Release").to_s
-	version_bump_podspec(path: "ContainerCollection.podspec", version_number: version_number)
-	git_commit(path: "ContainerCollection.podspec", message: "Bump version to #{version_number}")
-	add_git_tag(tag: version_number)
-	push_to_git_remote(remote_branch: "master", tags: true)
-	pod_push(path: "ContainerCollection.podspec")
+	pod_push(
+		path: "ContainerCollection.podspec",
+		verbose: false,
+		swift_version: "5.0"
+	)
 end
